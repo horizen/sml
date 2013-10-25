@@ -30,9 +30,6 @@ all: test-py
 test-py: $(TEST_SOS)
 
 -include $(SRCPATH)/t/subdir.mk
-#test_queue.so: sml_queue.c
-
-#test_string.so: sml_string.c
 
 clean:
 	$(RM) $(TEST_SOS)
