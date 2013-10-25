@@ -14,11 +14,13 @@ typedef struct node
 	int data;
 	sml_queue q;
 }node;
+
 int cmp(const sml_queue *a, const sml_queue *b) {
 	node *aa = sml_queue_data(a, node, q);
 	node *bb = sml_queue_data(b, node, q);
 	return aa->data - bb->data;
 }
+
 void mu_test_sml_queue()
 {
 	sml_queue head;
