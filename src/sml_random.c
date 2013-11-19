@@ -42,7 +42,7 @@ static sml_uint sml_mers_random()
     y ^=  y >> SML_MERS_L;
 
     return y;
- }
+}
 
 void sml_mers_random_init(sml_uint seed) 
 {
