@@ -4,6 +4,8 @@
  *  Created on: 2013年10月23日
  *      Author: yw
  */
+#ifndef SML_STRING_H_
+#define SML_STRING_H_
 
 #include "sml_config.h"
 
@@ -48,3 +50,5 @@ sml_int sml_strncasecmp(const u_char *s1, const u_char *s2, size_t n);
 
 sml_int sml_atoi(const u_char *str, size_t n, sml_int *val);
 sml_int sml_atof(const u_char *str, size_t n, double *val);
+
+#endif /* SML_STRING_H_ */

@@ -5,8 +5,8 @@
  *      Author: ys
  */
 
-#ifndef RANDOM_H_
-#define RANDOM_H_
+#ifndef SML_RANDOM_H_
+#define SML_RANDOM_H_
 
 #include "sml_config.h"
 
@@ -37,5 +37,8 @@ void sml_mother_random_init(sml_uint seed);
 int sml_mother_random_int(int min, int max);
 double sml_mother_random_float();
 
-
-#endif /* RANDOM_H_ */
+/* combined Mersenne and Mother random algo */
+void sml_combined_random_init(sml_uint seed);
+int sml_combined_random_int(int min, int max);
+double sml_combined_random_float();
+#endif /* SML_RANDOM_H_ */

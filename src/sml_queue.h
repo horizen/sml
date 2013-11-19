@@ -5,8 +5,8 @@
  *      Author: yw
  */
 
-#ifndef QUEUE_H_
-#define QUEUE_H_
+#ifndef SML_QUEUE_H_
+#define SML_QUEUE_H_
 
 typedef struct sml_queue {
 	struct sml_queue *prev;
@@ -60,4 +60,4 @@ typedef struct sml_queue {
 void sml_queue_sort(sml_queue *q, int (*cmp)(const sml_queue *, const sml_queue *));
 
 
-#endif /* QUEUE_H_ */
+#endif /* SML_QUEUE_H_ */

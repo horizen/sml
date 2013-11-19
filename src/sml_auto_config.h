@@ -1,3 +1,7 @@
+
+#ifndef SML_AUTO_CONFIG_H_
+#define SML_AUTO_CONFIG_H_
+
 #ifndef NGX_HAVE_EPOLL
 #define NGX_HAVE_EPOLL  1
 #endif
@@ -122,3 +126,4 @@
 #define NGX_HAVE_SHA1  1
 #endif
 
+#endif /* SML_AUTO_CONFIG_H_ */

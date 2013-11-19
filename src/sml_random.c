@@ -9,7 +9,7 @@ sml_int sml_random_int (sml_int min, sml_int max)
 
 /* Mersenne Twister algorithm */
 static sml_uint mt[SML_MERS_N];
-static sml_int mers;
+static sml_int mti;
 
 static sml_uint sml_mers_random()
 {
@@ -46,6 +46,7 @@ static sml_uint sml_mers_random()
 
 void sml_mers_random_init(sml_uint seed) 
 {
+	int i;
     const sml_uint factor = 1812433253UL;
     mt[0]= seed;
     for (mti = 1; mti < SML_MERS_N; mti++) {
@@ -135,6 +136,7 @@ int sml_mother_random_int(int min, int max)
 
 
 /* combined Mersenne Sister and Mother */
+
 /* init combined random */
 void sml_combined_random_init(sml_uint seed) 
 {
@@ -142,6 +144,7 @@ void sml_combined_random_init(sml_uint seed)
     sml_mother_randmom_init(seed);
 }
 
+/* output a float number between [0, 1) */
 double sml_combined_random_float()
 {
     double r = sml_mers_random_float() + sml_mother_random_float();
@@ -149,6 +152,7 @@ double sml_combined_random_float()
     return r;
 }
 
+/* output a number between [min, max] */
 int sml_combined_random_int(int min, int max)
 {
     int interval = max - min + 1;
