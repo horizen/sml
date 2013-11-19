@@ -4,7 +4,8 @@
  *  Created on: 2013年10月23日
  *      Author: yw
  */
-#include<sml_config.h>
+
+#include "sml_config.h"
 
 typedef struct sml_string{
 	size_t len;

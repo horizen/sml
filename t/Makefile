@@ -21,7 +21,7 @@ LD = $(CC)
 LDFLAGS = -I$(SRCPATH)/
 MUTEST = mutest
 
-TEST_OBJS = test_string.o test_queue.o
+TEST_OBJS = test_string.o test_queue.o test_random.o
 TEST_SOS = $(TEST_OBJS:.o=.so)
 
 
