@@ -5,13 +5,15 @@
  *      Author: yw
  */
 
+#include "sml_config.h"
+
 #ifndef SML_QUEUE_H_
 #define SML_QUEUE_H_
 
-typedef struct sml_queue {
-	struct sml_queue *prev;
-	struct sml_queue *next;
-}sml_queue;
+typedef struct sml_queue_s {
+	struct sml_queue_s *prev;
+	struct sml_queue_s *next;
+}sml_queue_t;
 
 #define sml_queue_init(q)				\
 	(q)->prev = q;						\
@@ -57,7 +59,7 @@ typedef struct sml_queue {
 #define sml_queue_data(q, type, member)	\
 	(type *)((u_char*)q - offsetof(type, member))
 
-void sml_queue_sort(sml_queue *q, int (*cmp)(const sml_queue *, const sml_queue *));
+void sml_queue_sort(sml_queue_t *q, int (*cmp)(const sml_queue_t *, const sml_queue_t *));
 
 
 #endif /* SML_QUEUE_H_ */

@@ -12,7 +12,7 @@
 
 /* glibc rand algo */
 #define sml_random_init srand
-sml_int sml_random_int (sml_int min, sml_int max);
+int sml_random_int (int min, int max);
 
 /* Mersenne Twister random algo */
 #define SML_MERS_N   624
@@ -26,19 +26,20 @@ sml_int sml_random_int (sml_int min, sml_int max);
 #define SML_MERS_B   0x9D2C5680
 #define SML_MERS_C   0xEFC60000
 
-void sml_mers_random_init(sml_uint seed);
-//void sml_mers_random_initbyarray(const sml_uint seeds[], size_t n);
+void sml_mers_random_init(sml_uint_t seed);
+//void sml_mers_random_initbyarray(const sml_uint_t seeds[], size_t n);
 int sml_mers_random_int(int min, int max);
 double sml_mers_random_float();
 
 
 /* The Mother random algo */
-void sml_mother_random_init(sml_uint seed);
+void sml_mother_random_init(sml_uint_t seed);
 int sml_mother_random_int(int min, int max);
 double sml_mother_random_float();
 
 /* combined Mersenne and Mother random algo */
-void sml_combined_random_init(sml_uint seed);
+void sml_combined_random_init(sml_uint_t seed);
 int sml_combined_random_int(int min, int max);
 double sml_combined_random_float();
+
 #endif /* SML_RANDOM_H_ */

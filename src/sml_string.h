@@ -9,10 +9,10 @@
 
 #include "sml_config.h"
 
-typedef struct sml_string{
+typedef struct sml_str_t{
 	size_t len;
 	u_char *data;
-}sml_string;
+}sml_str_t;
 
 #define sml_str_init(str) 	{ sizeof(str) - 1, (u_char *)str }
 #define sml_null_str		{ 0, NULL }
@@ -45,10 +45,10 @@ typedef struct sml_string{
 
 #define sml_memcmp(s1, s2, n)  		memcmp((const char *) s1, (const char *) s2, n)
 
-sml_int sml_strcasecmp(const u_char *s1, const u_char *s2);
-sml_int sml_strncasecmp(const u_char *s1, const u_char *s2, size_t n);
+sml_int_t sml_strcasecmp(const u_char *s1, const u_char *s2);
+sml_int_t sml_strncasecmp(const u_char *s1, const u_char *s2, size_t n);
 
-sml_int sml_atoi(const u_char *str, size_t n, sml_int *val);
-sml_int sml_atof(const u_char *str, size_t n, double *val);
+sml_int_t sml_atoi(const u_char *str, size_t n, sml_int_t *val);
+sml_int_t sml_atof(const u_char *str, size_t n, double *val);
 
 #endif /* SML_STRING_H_ */

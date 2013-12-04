@@ -55,7 +55,7 @@
 #include <sys/utsname.h>        /* uname() */
 
 
-#include <sml_auto_config.h>
+#include "sml_auto_config.h"
 
 
 #if (NGX_HAVE_POSIX_SEM)
