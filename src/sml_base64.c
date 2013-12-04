@@ -7,7 +7,7 @@
 
 #include "sml_base64.h"
 
-void sml_encode_base64(sml_string *dst, sml_string *src)
+void sml_encode_base64(sml_str_t *dst, sml_str_t *src)
 {
 	size_t len = src->len;
 	static u_char   base64[] =
@@ -34,7 +34,7 @@ void sml_encode_base64(sml_string *dst, sml_string *src)
 	}
 	dst->len = d - dst->data;
 }
-sml_int sml_decode_base64(sml_string *dst, sml_string *src)
+sml_int_t sml_decode_base64(sml_str_t *dst, sml_str_t *src)
 {
 	size_t len;
 	u_char * d, *s;
