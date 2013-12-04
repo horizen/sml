@@ -15,10 +15,10 @@ V = -v
 
 # Set to 0 if you don't want to compile the C++ test suite
 CPP_SUITE = 1
-SRCPATH = /home/yw/workspace/sml
+SRCPATH = ..
 CFLAGS = -Wall -std=c99
 LD = $(CC)
-LDFLAGS = -I$(SRCPATH)/
+LDFLAGS = -I$(SRCPATH)/src/
 MUTEST = mutest
 
 TEST_OBJS = test_string.o test_queue.o test_random.o
@@ -29,7 +29,7 @@ all: test-py
 
 test-py: $(TEST_SOS)
 
--include $(SRCPATH)/t/subdir.mk
+-include subdir.mk
 
 clean:
 	$(RM) $(TEST_SOS)

@@ -5,17 +5,17 @@
  *      Author: yw
  */
 
-#include <sml_config.h>
+
 #include "sml_queue.h"
 #include "mutest.h"
 
 typedef struct node
 {
 	int data;
-	sml_queue q;
+	sml_queue_t q;
 }node;
 
-int cmp(const sml_queue *a, const sml_queue *b) {
+int cmp(const sml_queue_t *a, const sml_queue_t *b) {
 	node *aa = sml_queue_data(a, node, q);
 	node *bb = sml_queue_data(b, node, q);
 	return aa->data - bb->data;
@@ -23,9 +23,9 @@ int cmp(const sml_queue *a, const sml_queue *b) {
 
 void mu_test_sml_queue()
 {
-	sml_queue head;
+	sml_queue_t head;
 	sml_queue_init(&head);
-	sml_queue *q;
+	sml_queue_t *q;
 	for(int i=0; i < 40; i++) {
 		node *val= (node *)malloc(sizeof(node));
 		val->data = i;
