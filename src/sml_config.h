@@ -8,7 +8,7 @@
 #ifndef SML_CONFIG_H_
 #define SML_CONFIG_H_
 
-#include<sml_linux_config.h>
+#include "sml_linux_config.h"
 #define SML_ERROR -1
 
 // Define integer types with known size: int32_t, uint32_t, int64_t, uint64_t.
@@ -37,10 +37,11 @@
   #define INT64_SUPPORTED // Remove this if the compiler doesn't support 64-bit integers
 #endif
 
-typedef int32_t         sml_uint;
-typedef uint32_t        sml_int;
+typedef int32_t         sml_int_t;
+typedef uint32_t        sml_uint_t;
 
-typedef int64_t         sml_int64;
-typedef uint64_t        sml_uint64;
+
+typedef int64_t         sml_int64_t;
+typedef uint64_t        sml_uint64_t;
 
 #endif /* SML_CONFIG_H_ */
